@@ -1,15 +1,11 @@
-// src/hooks/useFetchMovieDetails/useFetchMovieDetails.test.ts
-
 import { renderHook, waitFor } from '@testing-library/react';
 import { useFetchMovieDetails } from './useFetchMovieDetails';
 import { fetchMovieDetails } from '../../omdbApi';
 
-// Mock the omdbApi module
 jest.mock('../../omdbApi', () => ({
   fetchMovieDetails: jest.fn(),
 }));
 
-// Define reusable mock data
 const mockMovieDetails = {
   Title: 'Inception',
   Year: '2010',
