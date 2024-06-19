@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SearchBar from '../../components/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import MovieList from '../../components/MovieList';
 import { useFetchMovies } from '../../api/hooks/useFetchMovies';
 import styles from './HomePage.module.css';
