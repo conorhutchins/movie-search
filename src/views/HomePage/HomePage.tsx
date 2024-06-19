@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import MovieList from '../../components/MovieList/MovieList';
-import { useFetchMovies } from '../../api/hooks/useFetchMovies';
+import { useFetchMovies } from '../../api/hooks/useFetchMovies/useFetchMovies';
 import styles from './HomePage.module.css';
 
 export const HomePage: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useFetchMovieDetails } from '../../api/hooks/useFetchMovieDetails';
+import { useFetchMovieDetails } from '../../api/hooks/useFetchMovieDetails/useFetchMovieDetails';
 import MovieDetails from '../../components/MovieDetails/MovieDetails';
 import styles from './MoviePage.module.css';
 
