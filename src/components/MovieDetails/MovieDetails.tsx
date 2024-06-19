@@ -1,5 +1,6 @@
 import React from "react";
 import { MovieDetails as MovieDetailsType } from "../../api/omdbApi";
+import styles from "./MovieDetails.module.css";
 
 interface MovieDetailsProps {
     movie: MovieDetailsType;
@@ -8,8 +9,10 @@ interface MovieDetailsProps {
 const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
     return (
         <div>
-            <img src={movie.Poster} alt={movie.Title} style={{ width: '300px', borderRadius: '8px' }} />
+            <div className={styles.movieHeader}>
             <h2>{movie.Title}</h2>
+            <img src={movie.Poster} alt={movie.Title} className={styles.poster} />
+            </div>
             <p><strong>Year:</strong> {movie.Year}</p>
             <p><strong>Rated:</strong> {movie.Rated}</p>
             <p><strong>Released:</strong> {movie.Released}</p>

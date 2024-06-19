@@ -1,0 +1,10 @@
+.movieHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.poster {
+    width: 300px;
+    border-radius: '8px';
+}
