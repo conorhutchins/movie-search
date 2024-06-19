@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useFetchMovieDetails } from '../../api/hooks/useFetchMovieDetails';
-import MovieDetails from '../../components/MovieDetails';
+import MovieDetails from '../../components/MovieDetails/MovieDetails';
 import styles from './MoviePage.module.css';
 
 export const MoviePage: React.FC = () => {

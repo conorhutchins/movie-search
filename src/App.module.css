@@ -1,0 +1,10 @@
+.appContainer {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  padding-bottom: 818px;
+}
+
+.notFound {
+  color: red;
+  text-align: center;
+}
