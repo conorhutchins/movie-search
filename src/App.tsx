@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HomePage } from './views/HomePage/HomePage';
+import { MoviePage } from './views/MoviePage/MoviePage';
 import './App.css';
 
-function App() {
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div>
+              <Routes>
+                  <Route path="/" element={<HomePage/>} />
+                  <Route path="/movie/:movieId" element={<MoviePage/>} />
+                  <Route path="*" element={
+              <div>
+                <h2>404 - Page Not Found</h2>
+                <Link to="/">Go back to Home</Link>
+              </div>
+            }
+          />
+              </Routes>
+          </div>
+      </Router>
   );
-}
+};
 
 export default App;

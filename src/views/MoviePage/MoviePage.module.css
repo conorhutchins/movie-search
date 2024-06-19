@@ -1,0 +1,52 @@
+.moviePage {
+    padding: 20px;
+    text-align: center;
+    font-family: Lato, Lato-fallback, Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+.title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.loadingMessage {
+    color: white;
+    font-style: italic;
+    margin: 20px 0;
+}
+.backLink {
+    color: #657182;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+.backLink:hover {
+    color: #ffffff;
+}
+.movieDetails {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+.movieDetails h2 {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.movieDetails p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
