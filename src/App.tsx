@@ -4,10 +4,9 @@ import { HomePage } from './views/HomePage/HomePage';
 import { MoviePage } from './views/MoviePage/MoviePage';
 import styles from './App.module.css';
 
-
 const App: React.FC = () => {
   return (
-      <Router>
+      <Router basename="/movie-search">
           <div className={styles.appContainer}>
               <Routes>
                   <Route path="/" element={<HomePage/>} />

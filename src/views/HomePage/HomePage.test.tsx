@@ -13,18 +13,21 @@ const mockInitialEmptyState = {
   movies: [],
   loading: false,
   error: null,
+  hasMore: false,
 };
 
 const mockLoadingState = {
   movies: [],
   loading: true,
   error: null,
+  hasMore: false,
 };
 
 const mockErrorState = {
   movies: [],
   loading: false,
   error: 'Failed to fetch movies.',
+  hasMore: false,
 };
 
 const mockMoviesState = {
@@ -34,6 +37,7 @@ const mockMoviesState = {
   ],
   loading: false,
   error: null,
+  hasMore: false,
 };
 
 const mockMoviesWithMoreToLoadState = {
@@ -42,6 +46,7 @@ const mockMoviesWithMoreToLoadState = {
   ],
   loading: false,
   error: null,
+    hasMore: true,
 };
 
 describe('HomePage Component', () => {

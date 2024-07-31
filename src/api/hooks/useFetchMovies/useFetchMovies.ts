@@ -5,6 +5,9 @@ export const useFetchMovies = (searchTerm: string, page: number) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // const [hasMore, setHasMore] = useState(true);
+
+  const hasMore = movies.length < 32 
 
   useEffect(() => {
     if (!searchTerm) {
@@ -38,5 +41,5 @@ export const useFetchMovies = (searchTerm: string, page: number) => {
     setError(null);
   }, [searchTerm]);
 
-  return { movies, loading, error };
+  return { movies, loading, error, hasMore };
 };

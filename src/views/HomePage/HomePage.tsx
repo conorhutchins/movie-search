@@ -7,7 +7,7 @@ import styles from './HomePage.module.css';
 export const HomePage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [page, setPage] = useState<number>(1);
-    const { movies, loading, error } = useFetchMovies(searchTerm, page);
+    const { movies, loading, error, hasMore } = useFetchMovies(searchTerm, page);
 
     const handleSearch = (searchTerm: string) => {
         setSearchTerm(searchTerm);
@@ -24,6 +24,7 @@ export const HomePage: React.FC = () => {
         content = <p className={styles.errorMessage}>{error}</p>;
     } else if (loading && page === 1) {
         content = <p className={styles.loadingMessage}>Loading...</p>;
+
     } else { 
         content = (
             <>
@@ -31,12 +32,11 @@ export const HomePage: React.FC = () => {
                 {loading && page > 1 ? (
                     <p className={styles.loadingMoreMessage}>Loading more...</p>
                 ) : (
-                    movies.length > 0 && !loading && <button className={styles.loadMoreButton} onClick={loadMore}>Load More</button>
+                 hasMore &&  movies.length > 0 && !loading && <button className={styles.loadMoreButton} onClick={loadMore}>Load More</button>
                 )}
             </>
         );
     }
-
     return (
         <div className={styles.homePage}>
             <h1 className={styles.title}>Movie Search</h1>
