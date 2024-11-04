@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { MovieDetails as MovieDetailsType } from "../../api/omdbApi";
 import styles from "./MovieDetails.module.css";
 
@@ -6,7 +7,13 @@ interface MovieDetailsProps {
     movie: MovieDetailsType;
 }
 
+
 const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <div>
             <div className={styles.movieHeader}>
