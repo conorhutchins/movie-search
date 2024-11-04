@@ -1,7 +1,6 @@
 .homePage {
     padding: 20px;
     text-align: center;
-    font-family: Lato, Lato-fallback, Arial, sans-serif;
     background-color: black;
 }
 .title { 
@@ -21,14 +20,25 @@
     font-style: italic;
     margin: 20px 0;
 }
-.loadMoreButton {
+.loadMoreButton, .searchButton {
     background-color: #657182;
-    color: #060d17;
+    color: #f1f1f1;
     font-weight: bold;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 12px; /* Rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.loadMoreButton:hover, .searchButton:hover {
+    background-color: #9fa7b2;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.homePage p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #d1d1d1; /* Slightly lighter for better contrast */
 }

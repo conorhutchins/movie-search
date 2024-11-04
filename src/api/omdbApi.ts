@@ -44,6 +44,8 @@ export interface MovieDetails {
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 const BASE_URL = 'https://www.omdbapi.com';
 
+console.log('API Key:', API_KEY);
+
 export async function fetchMovies (searchTerm: string, page: number = 1): Promise<Movie[]> {
     const response = await fetch (`${BASE_URL}?apikey=${API_KEY}&s=${searchTerm}&page=${page}`);
     if (!response.ok) {

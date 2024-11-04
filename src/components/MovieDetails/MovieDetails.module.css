@@ -3,8 +3,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
+
 .poster {
     width: 300px;
-    border-radius: '8px';
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+.movieDetails p{
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #d1d1d1; /* Slightly lighter for better contrast */
+}
+.link, .backLink {
+    text-decoration: none;
+    color: #657182;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.link:hover, .backLink:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
 }

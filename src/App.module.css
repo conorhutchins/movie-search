@@ -1,10 +1,17 @@
 .appContainer {
-  font-family: Arial, sans-serif;
-  background-color: black;
-  padding-bottom: 818px;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
 }
 
 .notFound {
-  color: red;
+  color: #ff6b6b;
   text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
 }
