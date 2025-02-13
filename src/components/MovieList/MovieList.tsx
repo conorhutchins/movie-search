@@ -16,14 +16,20 @@ const MovieList: React.FC<MovieListProps> = ({ movies }) => {
             {movies.map((movie) => (
                 <li key={movie.imdbID}>
                     <div className="movie-info">
-                    <Link to={`/movie/${movie.imdbID}`} className={styles.link}>
-                        <img src={movie.Poster} alt={movie.Title} />
-                        <div>
-                            <h3>{movie.Title}</h3>
-                        </div>
-                    </Link>
-                            <p className={styles.white}>{movie.Year}</p>
+                        <Link to={`/movie/${movie.imdbID}`} className={styles.link}>
+                            <div className={styles.imageContainer}>
+                                {movie.Poster !== "N/A" ? (
+                                    <img src={movie.Poster} alt={movie.Title} className={styles.poster} />
+                                ) : (
+                                    <div className={styles.noImage}>No Image</div>
+                                )}
                             </div>
+                            <div>
+                                <h3>{movie.Title}</h3>
+                            </div>
+                        </Link>
+                        <p className={styles.white}>{movie.Year}</p>
+                    </div>
                 </li>
             ))}
         </ul>

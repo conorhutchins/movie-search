@@ -34,6 +34,7 @@ img {
 .link, .backLink {
     text-decoration: none;
     color: #d11a1d;
+    font-family: 'Epilogue', sans-serif;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
 }
@@ -42,3 +43,24 @@ img {
     color: #f1ce08e1;
     transform: translateY(-2px);
 }
+.imageContainer {
+    width: 250px;
+    height: 350px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  .poster {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+  }
+  
+  .noImage {
+    color: #fff;
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+  }

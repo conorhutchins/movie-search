@@ -6,6 +6,7 @@
 }
 
 .searchInput {
+    font-family: 'Epilogue', sans-serif;
     width: 40%;
     background-color: #9e2f30;
     color: #f1ce08e1;
@@ -29,6 +30,7 @@
 }
 
 .searchButton {
+    font-family: 'Epilogue', sans-serif;
     padding: 12px 25px;
     margin-left: 10px;
     background-color: #9e2f30;
