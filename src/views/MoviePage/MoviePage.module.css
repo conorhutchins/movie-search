@@ -1,52 +1,95 @@
-.moviePage {
+:root {
+    --primary-color: #f1ce08;
+    --secondary-color: #657182;
+    --accent-color: #9e2f30;
+    --bg-dark: #1a1a1a;
+    --bg-page: #000000;
+    --text-light: #ffffff;
+    --error-color: #ff4d4d;
+    --font-family: 'Epilogue', sans-serif;
+  }
+  
+  .moviePage {
     padding: 20px;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-.errorMessage {
-    color: red;
+
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  
+  .errorMessage,
+  .loadingMessage {
+    margin: 20px 0;
     font-weight: bold;
-    margin: 20px 0;
-}
-.loadingMessage {
-    color: white;
+  }
+  
+  .errorMessage {
+    color: var(--error-color);
+  }
+  
+  .loadingMessage {
+    color: var(--text-light);
     font-style: italic;
-    margin: 20px 0;
-}
-.backLink {
-    color: #657182;
+  }
+  
+  .movieDetails {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+  
+  .movieDetails:hover {
+    transform: translateY(-5px);
+  }
+  
+  .movieDetails h2 {
+    color: red;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .movieDetails p {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .backLink {
+    background-color: #9e2f30;
+    color: #f1ce08e1;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
-    display: inline-block;
-    transition: color 0.3s;
-}
-.backLink:hover {
-    color: #ffffff;
-}
-.movieDetails {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: left;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
-.movieDetails h2 {
-    color: #f5f5f5;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-.movieDetails p {
-    color: #cccccc;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-.title {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 20px;
-    align-items: center;
-}
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .backLink:hover {
+    background-color: #ca3c3f;
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 600px) {
+    .title {
+      font-size: 2rem;
+    }
+    .movieDetails {
+      padding: 20px;
+    }
+  }
+  

@@ -40,23 +40,22 @@ export const HomePage: React.FC = () => {
     }
     return (
         <div className={styles.homePage}>
-            <h1 className={styles.title}>Try a search below</h1>
-            <SearchBar onSearch={handleSearch} />
-            {movies.length > 0 || searchTerm ? (
-                content
-            ) : (
-                <div className={styles.welcome}>
-                    <img
-                        src={Image}
-                        alt="Conor's House of Movies"
-                        className={styles.welcomeImage}
-                    />
-                    <p>
-                        Welcome friend! Use the search bar above to find your
-                        favourite films.
-                    </p>
-                </div>
-            )}
+          {!searchTerm && <h1 className={styles.title}>Give it a whirl</h1>}
+          <SearchBar onSearch={handleSearch} />
+          {movies.length > 0 || searchTerm ? (
+            content
+          ) : (
+            <div className={styles.welcome}>
+              <img
+                src={Image}
+                alt="Conor's House of Movies"
+                className={styles.welcomeImage}
+              />
+              <p>
+                Welcome friend! Use the search bar above to find details on your favourite films.
+              </p>
+            </div>
+          )}
         </div>
-    );
-};
+      );
+    };      
