@@ -6,21 +6,34 @@ import styles from './App.module.css';
 
 const App: React.FC = () => {
   return (
-      <Router basename="/movie-search">
-          <div className={styles.appContainer}>
-              <Routes>
-                  <Route path="/" element={<HomePage/>} />
-                  <Route path="/movie/:movieId" element={<MoviePage/>} />
-                  <Route path="*" element={
-              <div>
-                <h2 className={styles.notFound}>404 - Page Not Found</h2>
-                <Link to="/">Go back to Home</Link>
-              </div>
-            }
-          />
-              </Routes>
-          </div>
-      </Router>
+    <Router basename="/movie-search">
+      <div className={styles.appContainer}>
+        <header className={styles.header}>
+          <Link to="/" className={styles.logo}>Conor's House of Movies</Link>
+        </header>
+
+        <main className={styles.mainContent}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movie/:movieId" element={<MoviePage />} />
+            <Route
+              path="*"
+              element={
+                <div className={styles.notFoundContainer}>
+                  <h2 className={styles.notFound}>404 - Page Not Found</h2>
+                  <Link to="/">Go back to Home</Link>
+                </div>
+              }
+            />
+          </Routes>
+        </main>
+
+        <footer className={styles.footer}>
+          {/* Optional footer text or links */}
+          &copy; {new Date().getFullYear()} Conor's Movie App
+        </footer>
+      </div>
+    </Router>
   );
 };
 

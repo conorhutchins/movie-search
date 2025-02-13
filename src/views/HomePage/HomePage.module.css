@@ -5,7 +5,7 @@
 }
 .title { 
     font-size: 2rem;
-    color: white;
+    color: #bf2225;
     margin-bottom: 20px;
 }
 .errorMessage {
@@ -21,24 +21,43 @@
     margin: 20px 0;
 }
 .loadMoreButton, .searchButton {
-    background-color: #657182;
-    color: #f1f1f1;
+    background-color: #9e2f30;
+    color: #f1ce08e1;
     font-weight: bold;
     border: none;
     padding: 10px 20px;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .loadMoreButton:hover, .searchButton:hover {
-    background-color: #9fa7b2;
-    transform: translateY(-2px); /* Slight lift on hover */
+    background-color: #ca3c3f;
+    transform: translateY(-2px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 .homePage p {
     line-height: 1.6;
     margin-bottom: 15px;
-    color: #d1d1d1; /* Slightly lighter for better contrast */
+    color: #f1ce08e1;
+    font-weight: bold;
 }
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.welcome {
+    margin-top: 2rem;
+}
+
+.welcomeImage {
+    padding-top: 5rem;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }

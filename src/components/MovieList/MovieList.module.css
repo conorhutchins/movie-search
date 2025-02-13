@@ -33,12 +33,12 @@ img {
 }
 .link, .backLink {
     text-decoration: none;
-    color: #657182;
+    color: #d11a1d;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
 }
 
 .link:hover, .backLink:hover {
-    color: #ffffff;
+    color: #f1ce08e1;
     transform: translateY(-2px);
 }

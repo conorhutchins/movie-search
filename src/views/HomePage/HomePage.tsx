@@ -3,6 +3,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import MovieList from '../../components/MovieList/MovieList';
 import { useFetchMovies } from '../../api/hooks/useFetchMovies/useFetchMovies';
 import styles from './HomePage.module.css';
+import Image from '../../images/house-of-movies.webp';
 
 export const HomePage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
@@ -39,9 +40,23 @@ export const HomePage: React.FC = () => {
     }
     return (
         <div className={styles.homePage}>
-            <h1 className={styles.title}>Movie Search</h1>
+            <h1 className={styles.title}>Try a search below</h1>
             <SearchBar onSearch={handleSearch} />
-            {content}
+            {movies.length > 0 || searchTerm ? (
+                content
+            ) : (
+                <div className={styles.welcome}>
+                    <img
+                        src={Image}
+                        alt="Conor's House of Movies"
+                        className={styles.welcomeImage}
+                    />
+                    <p>
+                        Welcome friend! Use the search bar above to find your
+                        favourite films.
+                    </p>
+                </div>
+            )}
         </div>
     );
 };

@@ -1,16 +1,49 @@
 .appContainer {
-  background-color: #121212;
-  color: #e0e0e0;
-  min-height: 100vh;
-  max-width: 1200px; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: #333;
   margin: 0 auto;
-  padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-  border-radius: 10px; 
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40;
+  padding: 1rem;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.mainContent {
+  flex: 1; 
+  padding: 2rem 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.notFoundContainer {
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .notFound {
-  color: #ff6b6b;
+  margin-bottom: 1rem;
+  color: #dc3545; 
   text-align: center;
   font-size: 2rem;
   margin-top: 50px;
